@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Expense Tracker</h1>
+            <p>Manage your daily expenses</p>
+        </header>
+
+        <!-- Add Expense Section -->
+        <section class="card">
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Enter expense name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Enter amount"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <select id="expenseCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Education">Education</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">Add Expense</button>
+
+            </form>
+        </section>
+
+        <!-- Total Expenses -->
+        <section class="card total-card">
+            <h2>Total Expenses</h2>
+            <h1 id="totalAmount">₹0</h1>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="card filter-section">
+
+            <label for="filterCategory">
+                Filter by Category:
+            </label>
+
+            <select id="filterCategory">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Education">Education</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+        </section>
+
+        <!-- Expenses List -->
+        <section class="card">
+
+            <h2>My Expenses</h2>
+
+            <div id="expenseList">
+                <p class="empty-message">
+                    No expenses added yet.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
